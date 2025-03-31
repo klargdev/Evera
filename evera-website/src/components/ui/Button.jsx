@@ -17,11 +17,12 @@ const Button = ({
   const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'
   
   const variantStyles = {
-    primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
-    secondary: 'bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 focus:ring-gray-500',
-    outline: 'border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 focus:ring-blue-500',
-    ghost: 'text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 focus:ring-blue-500',
-    link: 'text-blue-600 hover:underline p-0 focus:ring-0'
+    primary: 'bg-evera-teal-dark hover:bg-opacity-90 text-white focus:ring-evera-teal',
+    secondary: 'bg-evera-skyblue hover:bg-opacity-90 text-evera-dark focus:ring-evera-skyblue',
+    outline: 'border border-evera-teal-dark text-evera-teal-dark hover:bg-evera-teal-dark/5 focus:ring-evera-teal',
+    ghost: 'text-evera-teal-dark hover:bg-evera-teal-dark/5 focus:ring-evera-teal',
+    sand: 'bg-evera-sand hover:bg-opacity-90 text-evera-dark focus:ring-evera-sand',
+    link: 'text-evera-teal-dark hover:underline p-0 focus:ring-0'
   }
   
   const sizeStyles = {

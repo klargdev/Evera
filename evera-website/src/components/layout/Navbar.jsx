@@ -26,10 +26,10 @@ const Navbar = () => {
   ]
   
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white dark:bg-gray-900 shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-evera-offwhite shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">Evera</span>
+          <img src="/images/logo.svg" alt="Evera Logo" className="h-10" />
         </Link>
         
         {/* Desktop Navigation */}
@@ -39,7 +39,7 @@ const Navbar = () => {
               key={link.path} 
               to={link.path}
               className={({ isActive }) => 
-                `font-medium transition-colors ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`
+                `font-medium transition-colors ${isActive ? 'text-evera-teal-dark font-semibold' : 'text-evera-dark hover:text-evera-teal'}`
               }
             >
               {link.name}
@@ -49,7 +49,7 @@ const Navbar = () => {
         
         {/* Mobile Navigation Button */}
         <button 
-          className="md:hidden text-gray-700 dark:text-gray-300"
+          className="md:hidden text-evera-teal-dark"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
@@ -71,7 +71,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white dark:bg-gray-800 shadow-lg py-4"
+          className="md:hidden bg-evera-offwhite shadow-lg py-4"
         >
           <div className="container mx-auto px-4 flex flex-col space-y-3">
             {navigationLinks.map((link) => (
@@ -79,7 +79,7 @@ const Navbar = () => {
                 key={link.path} 
                 to={link.path}
                 className={({ isActive }) => 
-                  `font-medium transition-colors py-2 ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'}`
+                  `font-medium transition-colors py-2 ${isActive ? 'text-evera-teal-dark font-semibold' : 'text-evera-dark'}`
                 }
                 onClick={() => setIsOpen(false)}
               >

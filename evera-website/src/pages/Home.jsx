@@ -16,7 +16,7 @@ const Home = () => {
       
       <FeaturedProjects limit={3} />
       
-      <section className="py-16 md:py-24 bg-blue-700 text-white">
+      <section className="py-16 md:py-24 bg-evera-teal-dark text-evera-offwhite">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 
@@ -24,7 +24,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold mb-6"
+              className="text-3xl md:text-4xl font-bold mb-6 text-evera-sand"
             >
               Ready to Create a Memorable Event Experience?
             </motion.h2>
@@ -33,7 +33,7 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl mb-8"
+              className="text-xl mb-8 text-evera-skyblue"
             >
               Let us help you build the perfect digital solution for your next event.
             </motion.p>
@@ -45,9 +45,9 @@ const Home = () => {
             >
               <Button
                 to="/contact"
-                variant="outline"
+                variant="sand"
                 size="lg"
-                className="px-8 border-white text-white hover:bg-white hover:text-blue-700"
+                className="px-8"
               >
                 Contact Us Today
               </Button>

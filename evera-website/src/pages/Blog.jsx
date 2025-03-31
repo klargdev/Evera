@@ -1,6 +1,7 @@
 // src/pages/Blog.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import Hero from '../components/sections/Hero';
 
 const blogPosts = [
   {
@@ -34,33 +35,58 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 bg-gray-900 text-white">
-      <h1 className="text-5xl font-bold mb-8 text-center">Blog</h1>
-      <div className="space-y-8">
-        {blogPosts.map((post, index) => (
-          <motion.div
-            key={post.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="border border-gray-700 rounded-lg p-6 shadow-lg bg-gray-800"
-          >
-            <h2 className="text-3xl font-semibold mb-2">{post.title}</h2>
-            <div className="text-sm text-gray-400 mb-4">
-              <span>{post.date}</span> | <span>{post.author}</span>
-            </div>
-            <p className="text-lg mb-4">{post.excerpt}</p>
-            <a
-              href={post.link}
-              className="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded transition-colors"
+    <>
+      <Hero
+        title="Our Blog"
+        subtitle="Insights and updates from the world of digital event solutions"
+        imageUrl="/images/hero-bg.jpg"
+        primaryButtonText="Latest Articles"
+        primaryButtonLink="#blog-posts"
+        secondaryButtonText="Contact Us"
+        secondaryButtonLink="/contact"
+      />
+      
+      <section id="blog-posts" className="py-16 bg-evera-cream">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold mb-8 text-center text-evera-teal-dark"
             >
-              Read More
-            </a>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+              Latest Articles
+            </motion.h2>
+            
+            <div className="space-y-8">
+              {blogPosts.map((post, index) => (
+                <motion.div
+                  key={post.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="border border-evera-skyblue/20 rounded-lg p-6 shadow-md bg-white hover:shadow-lg transition-all duration-300 hover:border-evera-skyblue/40"
+                >
+                  <h2 className="text-2xl font-semibold mb-2 text-evera-teal-dark">{post.title}</h2>
+                  <div className="text-sm text-evera-teal mb-4">
+                    <span>{post.date}</span> | <span>{post.author}</span>
+                  </div>
+                  <p className="text-lg mb-4 text-evera-dark">{post.excerpt}</p>
+                  <a
+                    href={post.link}
+                    className="inline-block px-6 py-2 bg-evera-teal-dark hover:bg-opacity-90 text-white font-semibold rounded transition-colors"
+                  >
+                    Read More
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

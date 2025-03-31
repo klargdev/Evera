@@ -18,7 +18,7 @@ const PortfolioItem = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all"
+      className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all border border-evera-skyblue/20"
     >
       <div className="relative h-64 overflow-hidden">
         <img 
@@ -32,18 +32,18 @@ const PortfolioItem = ({
           {tags.map((tag, i) => (
             <span 
               key={i} 
-              className="text-xs px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
+              className="text-xs px-2 py-1 rounded-full bg-evera-sand/40 text-evera-teal-dark"
             >
               {tag}
             </span>
           ))}
         </div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <h3 className="text-xl font-bold mb-2 text-evera-teal-dark">{title}</h3>
         {client && (
-          <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Client: {client}</p>
+          <p className="text-sm text-evera-teal mb-2">Client: {client}</p>
         )}
-        <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
-        <Button to={link} variant="outline" size="sm">
+        <p className="text-evera-dark mb-4">{description}</p>
+        <Button to={link} variant="sand" size="sm">
           View Project
         </Button>
       </div>

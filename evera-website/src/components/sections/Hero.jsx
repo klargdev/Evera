@@ -1,11 +1,11 @@
-/ src/components/sections/Hero.jsx
+// src/components/sections/Hero.jsx
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
 
 const Hero = ({
   title = "Crafting Digital Experiences for Every Occasion",
   subtitle = "From solemn memorials to joyful celebrations, Evera creates custom software applications that make your events meaningful and memorable.",
-  imageUrl = "/src/assets/images/hero-bg.jpg", // Default image path
+  imageUrl = "/images/hero-bg.jpg", // Updated image path to use public directory
   primaryButtonText = "Get Started",
   primaryButtonLink = "/contact",
   secondaryButtonText = "View Our Work",
@@ -38,7 +38,7 @@ const Hero = ({
           alt="Evera Hero Background" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-blue-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-evera-dark/90 to-evera-teal-dark/80"></div>
       </div>
       
       {/* Content */}
@@ -51,14 +51,14 @@ const Hero = ({
         >
           <motion.h1 
             variants={childVariants}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-evera-offwhite mb-6"
           >
             {title}
           </motion.h1>
           
           <motion.p 
             variants={childVariants}
-            className="text-xl text-gray-200 mb-8"
+            className="text-xl text-evera-skyblue mb-8"
           >
             {subtitle}
           </motion.p>
@@ -67,11 +67,11 @@ const Hero = ({
             variants={childVariants}
             className="flex flex-wrap gap-4"
           >
-            <Button to={primaryButtonLink} size="lg">
+            <Button to={primaryButtonLink} variant="sand" size="lg">
               {primaryButtonText}
             </Button>
             
-            <Button to={secondaryButtonLink} variant="outline" size="lg" className="text-white border-white hover:bg-white/10">
+            <Button to={secondaryButtonLink} variant="outline" size="lg" className="text-evera-offwhite border-evera-offwhite hover:bg-evera-offwhite/10">
               {secondaryButtonText}
             </Button>
           </motion.div>

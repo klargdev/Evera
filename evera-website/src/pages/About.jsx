@@ -1,72 +1,70 @@
 // src/pages/About.jsx
 import React from 'react';
+import { motion } from 'framer-motion';
+import Hero from '../components/sections/Hero';
 
 const About = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12 bg-gray-900 text-white">
-      <h1 className="text-5xl font-bold mb-8 text-center">About Evera</h1>
+    <>
+      <Hero 
+        title="About Evera"
+        subtitle="Creating meaningful digital experiences for life's most important moments"
+        imageUrl="/images/hero-bg.jpg"
+        primaryButtonText="Our Services"
+        primaryButtonLink="/services" 
+        secondaryButtonText="Contact Us"
+        secondaryButtonLink="/contact"
+      />
       
-      {/* Our Mission Section */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
-        <p className="text-lg leading-relaxed">
-          Evera is dedicated to creating modern, digital experiences for every kind of event. From the most solemn memorials to the most joyful celebrations, we design and build software applications that help capture the essence of each moment. Our mission is to empower you to celebrate life’s milestones with innovative, tailored solutions that truly resonate.
-        </p>
-      </section>
-      
-      {/* Who We Are Section */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
-        <p className="text-lg leading-relaxed">
-          We are a forward-thinking technology company specializing in custom digital solutions for events. Combining creativity, state-of-the-art technology, and a deep understanding of human emotions, our team crafts applications that honor both the bittersweet and the joyous moments in life. At Evera, every project is an opportunity to make memories last.
-        </p>
-      </section>
-      
-      {/* Our Values Section */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-4">Our Values</h2>
-        <ul className="list-disc ml-6 text-lg">
-          <li><strong>Innovation:</strong> Continuously pushing the boundaries of digital experiences.</li>
-          <li><strong>Integrity:</strong> Upholding the highest standards of honesty and transparency.</li>
-          <li><strong>Compassion:</strong> Understanding the significance of every event and honoring it with care.</li>
-          <li><strong>Excellence:</strong> Striving for quality and precision in all our projects.</li>
-        </ul>
-      </section>
-      
-      {/* Meet the Team Section */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-4">Meet the Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-800 p-4 rounded-lg">
-            <img 
-              src="https://via.placeholder.com/150" 
-              alt="Alice Johnson" 
-              className="w-32 h-32 rounded-full mx-auto mb-4" 
-            />
-            <h3 className="text-xl font-bold text-center">Alice Johnson</h3>
-            <p className="text-center text-gray-400">CEO & Founder</p>
-          </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
-            <img 
-              src="https://via.placeholder.com/150" 
-              alt="Bob Smith" 
-              className="w-32 h-32 rounded-full mx-auto mb-4" 
-            />
-            <h3 className="text-xl font-bold text-center">Bob Smith</h3>
-            <p className="text-center text-gray-400">Lead Developer</p>
-          </div>
-          <div className="bg-gray-800 p-4 rounded-lg">
-            <img 
-              src="https://via.placeholder.com/150" 
-              alt="Cathy Brown" 
-              className="w-32 h-32 rounded-full mx-auto mb-4" 
-            />
-            <h3 className="text-xl font-bold text-center">Cathy Brown</h3>
-            <p className="text-center text-gray-400">Creative Director</p>
+      <section className="py-16 bg-evera-cream">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-3xl font-bold mb-6 text-evera-teal-dark">Our Story</h2>
+              <p className="mb-6 text-evera-dark">
+                Founded in 2020, Evera was born from a simple idea: that life's most meaningful events deserve digital experiences that match their importance. Whether celebrating joyous occasions or honoring solemn moments, we believe technology should enhance human connection, not replace it.
+              </p>
+              <p className="mb-8 text-evera-dark">
+                Our team combines expertise in design, development, and event planning to create solutions that are both technically robust and emotionally resonant. We work closely with each client to understand their unique needs and create custom digital experiences that exceed expectations.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-12"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-evera-teal-dark">Our Values</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Empathy First</h3>
+                  <p className="text-evera-dark">We approach every project with deep empathy, understanding that we're creating experiences for some of life's most emotionally charged moments.</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Technical Excellence</h3>
+                  <p className="text-evera-dark">We believe in building robust, reliable solutions that work flawlessly when they matter most.</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Beautiful Design</h3>
+                  <p className="text-evera-dark">We create experiences that are not just functional but beautiful, respecting the significance of each event we help digitize.</p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Client Partnership</h3>
+                  <p className="text-evera-dark">We see each client as a partner, working collaboratively to achieve the perfect digital solution for their needs.</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

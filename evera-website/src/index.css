@@ -1,11 +1,11 @@
-// src/index.css
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    @apply bg-evera-cream text-evera-dark;
   }
 }
 
@@ -19,18 +19,18 @@
   }
   
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-evera-teal-dark;
   }
   
   .heading-lg {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-3xl md:text-4xl font-bold text-evera-teal-dark;
   }
   
   .heading-md {
-    @apply text-2xl md:text-3xl font-bold;
+    @apply text-2xl md:text-3xl font-bold text-evera-teal-dark;
   }
   
   .heading-sm {
-    @apply text-xl md:text-2xl font-bold;
+    @apply text-xl md:text-2xl font-bold text-evera-teal-dark;
   }
 }

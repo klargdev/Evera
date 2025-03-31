@@ -1,59 +1,88 @@
 // src/pages/Services.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import ServiceCard from '../components/ui/ServiceCard';
+import ServicesSection from '../components/sections/Services';
+import Hero from '../components/sections/Hero';
 
-const servicesData = [
-  {
-    id: 1,
-    title: "Memorial Tribute Websites",
-    description: "Custom websites designed to honor memories and celebrate legacies with heartfelt design and robust functionality.",
-    icon: "🕊️", // You can also use an image or icon component
-  },
-  {
-    id: 2,
-    title: "Wedding & Event Platforms",
-    description: "Elegant digital solutions for managing weddings and events, including invitations, RSVPs, and live guestbooks.",
-    icon: "💍",
-  },
-  {
-    id: 3,
-    title: "Corporate Event Systems",
-    description: "Robust systems to streamline corporate event planning, registration, and on-site management.",
-    icon: "🏢",
-  },
-  {
-    id: 4,
-    title: "Custom Event Apps",
-    description: "Tailor-made mobile and web applications to enhance attendee engagement at events of any scale.",
-    icon: "📱",
-  },
-  // Add more services as needed...
-];
-
-const Services = () => {
+const ServicesPage = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 bg-gray-900 text-white">
-      <h1 className="text-5xl font-bold text-center mb-8">Our Services</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {servicesData.map((service, index) => (
-          <motion.div
-            key={service.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <ServiceCard 
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-            />
-          </motion.div>
-        ))}
-      </div>
-    </div>
+    <>
+      <Hero
+        title="Our Services"
+        subtitle="Digital solutions for every important occasion"
+        imageUrl="/images/corporate-event.jpg"
+        primaryButtonText="Contact Us"
+        primaryButtonLink="/contact"
+        secondaryButtonText="View Our Work"
+        secondaryButtonLink="/portfolio"
+      />
+      
+      <ServicesSection 
+        title="Complete Digital Event Solutions"
+        subtitle="From memorial websites to corporate event systems, we create custom digital experiences for all types of events"
+      />
+      
+      <section className="py-16 bg-evera-cream">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold mb-8 text-center text-evera-teal-dark"
+            >
+              How We Work
+            </motion.h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <div className="w-16 h-16 bg-evera-skyblue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-evera-teal-dark">1</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Consultation</h3>
+                <p className="text-evera-dark">We begin with a detailed consultation to understand your event needs and goals.</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <div className="w-16 h-16 bg-evera-skyblue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-evera-teal-dark">2</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Design & Development</h3>
+                <p className="text-evera-dark">Our team designs and builds a custom solution tailored to your specific requirements.</p>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <div className="w-16 h-16 bg-evera-skyblue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-evera-teal-dark">3</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-evera-teal-dark">Support & Success</h3>
+                <p className="text-evera-dark">We provide ongoing support to ensure your event's digital experience is a success.</p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default Services;
+export default ServicesPage;

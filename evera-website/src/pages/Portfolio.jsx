@@ -1,66 +1,66 @@
 // src/pages/Portfolio.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import FeaturedProjects from '../components/sections/FeaturedProjects';
+import Hero from '../components/sections/Hero';
 
-const portfolioItems = [
-  {
-    id: 1,
-    title: "Memorial Tribute Site",
-    image: "https://via.placeholder.com/400x300",
-    description: "A responsive website dedicated to memorial tributes, capturing heartfelt memories.",
-    link: "/portfolio/memorial-tribute",
-  },
-  {
-    id: 2,
-    title: "Wedding Event Platform",
-    image: "https://via.placeholder.com/400x300",
-    description: "A custom event management solution for weddings with elegant design.",
-    link: "/portfolio/wedding-platform",
-  },
-  {
-    id: 3,
-    title: "Corporate Event System",
-    image: "https://via.placeholder.com/400x300",
-    description: "A robust application for managing corporate events and conferences.",
-    link: "/portfolio/corporate-event",
-  },
-  // Add more portfolio items as needed...
-];
-
-const Portfolio = () => {
+const PortfolioPage = () => {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12 bg-gray-900 text-white">
-      <h1 className="text-5xl font-bold mb-8 text-center">Our Portfolio</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {portfolioItems.map((item, index) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-800 rounded-lg overflow-hidden shadow-lg"
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-2xl font-semibold mb-2">{item.title}</h2>
-              <p className="text-gray-300 mb-4">{item.description}</p>
-              <a
-                href={item.link}
-                className="inline-block px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded transition-colors"
+    <>
+      <Hero
+        title="Our Portfolio"
+        subtitle="See how we've helped clients create memorable digital experiences for their events"
+        imageUrl="/images/wedding-event.jpg"
+        primaryButtonText="Contact Us"
+        primaryButtonLink="/contact"
+        secondaryButtonText="Our Services"
+        secondaryButtonLink="/services"
+      />
+      
+      <FeaturedProjects 
+        title="Our Latest Projects"
+        subtitle="Explore our recent work creating digital solutions for various events"
+      />
+      
+      <section className="py-16 bg-evera-cream">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold mb-6 text-evera-teal-dark"
+            >
+              Ready to Start Your Project?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-lg mb-8 text-evera-dark"
+            >
+              Contact us today to discuss how we can create the perfect digital solution for your next event.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <a 
+                href="/contact" 
+                className="inline-flex items-center justify-center font-medium rounded-lg px-5 py-3 text-lg transition-all duration-300 bg-evera-teal-dark hover:bg-opacity-90 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-evera-teal"
               >
-                View Project
+                Get in Touch
               </a>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;
