@@ -25,6 +25,7 @@ const PortfolioItem = ({
           src={image} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          loading="lazy"
         />
       </div>
       <div className="p-6">

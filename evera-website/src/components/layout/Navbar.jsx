@@ -21,15 +21,14 @@ const Navbar = () => {
     { name: 'Services', path: '/services' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' }
+    { name: 'Contact', path: '/contact' }
   ]
   
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-evera-offwhite shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="/images/logo.svg" alt="Evera Logo" className="h-10" />
+          <img src="/images/logo.png" alt="Evera Logo" className="h-10" />
         </Link>
         
         {/* Desktop Navigation */}

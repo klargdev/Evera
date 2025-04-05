@@ -1,12 +1,32 @@
 // src/data/projects.js
+import memorialService from '../assets/images/memorial-service.jpg';
+import weddingEvent from '../assets/images/wedding-event.jpg';
+import corporateEvent from '../assets/images/corporate-event.jpg';
+
 const projects = [
     {
       title: "Williams Family Memorial",
       description: "A tribute website honoring the life of James Williams with photo galleries, memory sharing, and virtual guestbook.",
-      image: "/images/memorial-service.jpg",
+      image: memorialService,
       tags: ["Memorial", "Tribute", "Live Streaming"],
       client: "Williams Family",
       link: "/portfolio/williams-memorial"
+    },
+    {
+      title: "Sarah & Michael's Wedding",
+      description: "A beautiful wedding website featuring RSVP management, gift registry, and event schedule.",
+      image: weddingEvent,
+      tags: ["Wedding", "RSVP", "Registry"],
+      client: "Sarah & Michael",
+      link: "/portfolio/sarah-michael-wedding"
+    },
+    {
+      title: "TechCorp Annual Conference",
+      description: "A comprehensive event platform for a major tech conference with live streaming and networking features.",
+      image: corporateEvent,
+      tags: ["Conference", "Live Streaming", "Networking"],
+      client: "TechCorp",
+      link: "/portfolio/techcorp-conference"
     },
     {
       title: "Johnson-Smith Wedding",
