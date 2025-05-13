@@ -48,6 +48,7 @@ const Testimonials = ({
               company={testimonial.company}
               image={testimonial.image}
               index={index}
+              animate={{ x: index % 2 === 0 ? [-5, 5, -5] : [5, -5, 5], transition: { duration: 4, repeat: Infinity, repeatType: 'reverse' } }}
             />
           ))}
         </div>

@@ -15,6 +15,8 @@ const TestimonialCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
+      whileHover={{ scale: 1.05 }}
+      animate={{ rotate: [-1, 1, -1], transition: { duration: 4, repeat: Infinity, repeatType: 'reverse' } }}
       className="bg-white p-6 rounded-lg shadow-md relative border border-evera-skyblue/20"
     >
       <div className="mb-4 text-evera-teal">

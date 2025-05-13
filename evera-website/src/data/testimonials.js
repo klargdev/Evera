@@ -2,8 +2,8 @@
 import sarahImg from '../assets/images/sarah.jpg'
 import weddingEventImg from '../assets/images/wedding-event.jpg'
 import corporateEventImg from '../assets/images/corporate-event.jpg'
-import memorialServiceImg from '../assets/images/memorial-service.jpg'
-import miguelImg from '../assets/images/miguel.jpg'
+//import memorialServiceImg from '../assets/images/memorial-service.jpg'
+//import miguelImg from '../assets/images/miguel.jpg'
 
 const testimonials = [
   {
@@ -25,26 +25,26 @@ const testimonials = [
     company: "TechCorp Inc.",
     image: corporateEventImg
   },
-  {
-    quote: "The virtual guestbook and streaming service allowed relatives who couldn't travel to be part of our celebration. The interface was intuitive for users of all ages - even my grandparents figured it out easily!",
-    author: "Miguel Garcia",
-    role: "Birthday Celebration Client",
-    image: corporateEventImg // Temporarily using corporate event image
-  },
-  {
-    quote: "Evera transformed how we manage our community memorial archives. The system they created is respectful, dignified, and has helped preserve important memories for generations to come.",
-    author: "Rev. Thomas Parker",
-    role: "Pastor",
-    company: "St. Mary's Church",
-    image: memorialServiceImg
-  },
-  {
-    quote: "The donation management system Evera built for our annual gala helped us raise 50% more funds than last year. Their attention to detail and understanding of our needs was exceptional.",
-    author: "Jennifer Liu",
-    role: "Executive Director",
-    company: "Hope Foundation",
-    image: corporateEventImg
-  }
+  // {
+  //   quote: "The virtual guestbook and streaming service allowed relatives who couldn't travel to be part of our celebration. The interface was intuitive for users of all ages - even my grandparents figured it out easily!",
+  //   author: "Miguel Garcia", 
+  //   role: "Birthday Celebration Client",
+  //   image: miguelImg
+  // },
+  // {
+  //   quote: "Evera transformed how we manage our community memorial archives. The system they created is respectful, dignified, and has helped preserve important memories for generations to come.",
+  //   author: "Rev. Thomas Parker",
+  //   role: "Pastor", 
+  //   company: "St. Mary's Church",
+  //   image: memorialServiceImg
+  // },
+  // {
+  //   quote: "The donation management system Evera built for our annual gala helped us raise 50% more funds than last year. Their attention to detail and understanding of our needs was exceptional.",
+  //   author: "Jennifer Liu", 
+  //   role: "Executive Director",
+  //   company: "Hope Foundation",
+  //   image: corporateEventImg
+  // }
 ]
 
 export default testimonials

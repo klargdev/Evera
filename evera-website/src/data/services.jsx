@@ -3,48 +3,28 @@ import React from 'react'
 
 const services = [
   {
-    title: "Memorial & Funeral Tribute Websites",
-    description: "Create dignified digital tributes to honor and celebrate the lives of loved ones. Include photos, videos, memories, and livestreaming options.",
+    title: "Eulogy & Memorial Services",
+    description: "Opportunity for families to eulogise departed loved ones and create dignified digital tributes.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
-    href: "/services#memorial"
+    href: "/services#eulogy"
   },
   {
-    title: "Wedding & Event Websites",
-    description: "Customized websites for your special day with RSVP management, gift registries, photo galleries, and itineraries.",
+    title: "Funeral & Event Collections",
+    description: "Make it easier for families to collect donations for funerals and other events.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0 10c-4.418 0-8-1.79-8-4V6c0-2.21 3.582-4 8-4s8 1.79 8 4v8c0 2.21-3.582 4-8 4z" />
       </svg>
     ),
-    href: "/services#wedding"
+    href: "/services#collections"
   },
   {
-    title: "Event Management Systems",
-    description: "Comprehensive solutions for managing registrations, ticketing, seating arrangements, and attendee communications.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    href: "/services#management"
-  },
-  {
-    title: "Corporate Event Solutions",
-    description: "Professional digital platforms for conferences, seminars, and business events with scheduling, networking, and feedback tools.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-    href: "/services#corporate"
-  },
-  {
-    title: "RSVP & Invitation Management",
-    description: "Digital invitation delivery, RSVP tracking, and guest list management with automated reminders and updates.",
+    title: "RSVP & Event Attendance",
+    description: "Make it easiest for people to RSVP events they wish to attend, and manage guest lists for all event types.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -53,14 +33,54 @@ const services = [
     href: "/services#rsvp"
   },
   {
-    title: "Live Streaming & Digital Guestbooks",
-    description: "Share your event with those who can't attend in person and collect messages, photos, and videos from attendees.",
+    title: "Payments & Donations",
+    description: "Make it easier for people to pay for and donate to events, with secure digital payment solutions.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0 10c-4.418 0-8-1.79-8-4V6c0-2.21 3.582-4 8-4s8 1.79 8 4v8c0 2.21-3.582 4-8 4z" />
       </svg>
     ),
-    href: "/services#streaming"
+    href: "/services#payments"
+  },
+  {
+    title: "Social Media Marketing & Influencer Promotion",
+    description: "Social media marketing for events, account creation, management, and promotion. Expand your reach with top influencers.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2m2-4h4a2 2 0 012 2v4H7V6a2 2 0 012-2z" />
+      </svg>
+    ),
+    href: "/services#socialmedia"
+  },
+  {
+    title: "Event Feedback & Analytics",
+    description: "Collect feedback from attendees to events and gain insights to improve future experiences.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17a2 2 0 104 0 2 2 0 00-4 0zm-7-2a2 2 0 104 0 2 2 0 00-4 0zm14 0a2 2 0 104 0 2 2 0 00-4 0zm-7-2a2 2 0 104 0 2 2 0 00-4 0zm14 0a2 2 0 104 0 2 2 0 00-4 0z" />
+      </svg>
+    ),
+    href: "/services#feedback"
+  },
+  {
+    title: "Websites & Web App Creation",
+    description: "Websites and web app creation for funerals, events, organisations, and social media journalists and practitioners.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+      </svg>
+    ),
+    href: "/services#webapps"
+  },
+  {
+    title: "General IT Services",
+    description: "General IT services for events, organisations, and individuals.",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2a4 4 0 014-4h2a4 4 0 014 4v2" />
+      </svg>
+    ),
+    href: "/services#it"
   }
 ]
 
