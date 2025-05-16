@@ -10,7 +10,7 @@ const projects = [
       image: memorialService,
       tags: ["Memorial", "Tribute", "Live Streaming"],
       client: "Williams Family",
-      link: "wisdomf.netlify.app"
+      link: "https://wisdomf.netlify.app/"
     },
     {
       title: "Sarah & Michael's Wedding",
